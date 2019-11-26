@@ -1,0 +1,6 @@
+/win32/Debug
+/win32/Release
+/win32/*/Debug
+/win32/*/Release
+.vs
+/win32/Backup

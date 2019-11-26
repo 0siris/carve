@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <glut32_376>true</glut32_376>
+  </PropertyGroup>
+
+ 
+  <ItemDefinitionGroup>
+    <ClCompile>
+       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)\glut-3.7.6-bin\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories> 
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)\glut-3.7.6-bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+	    <Content Include="$(MSBuildThisFileDirectory)\glut-3.7.6-bin\glut32.dll" CopyToOutputDirectory="PreserveNewest"/>
+  </ItemGroup>
+
+
+   <Target Name="GlutClean" AfterTargets="Clean"> 
+     <Message Text="GlewGlutClean" /> 
+     <ItemGroup> 
+       <FilesToDelete Include="
+                      $(OutDir)glut32.dll;
+                      "/> 
+     </ItemGroup> 
+     <Delete Files="@(FilesToDelete)" /> 
+   </Target> 
+
+</Project>

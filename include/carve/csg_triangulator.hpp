@@ -27,6 +27,7 @@
 #include <carve/tag.hpp>
 #include <carve/triangulator.hpp>
 #include <deque>
+#include <iterator>
 
 namespace carve {
 namespace csg {

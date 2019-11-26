@@ -31,6 +31,8 @@
 #include <carve/rtree.hpp>
 
 #include <carve/poly.hpp>
+#include <functional>
+#include <algorithm>
 
 namespace {
 inline double CALC_X(const carve::geom::plane<3>& p, double y, double z) {
